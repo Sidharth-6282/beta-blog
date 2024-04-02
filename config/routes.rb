@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   # The students table
 
-  resources :students, only: [:show, :index]
+  resources :students, only: [:show, :index, :new, :create]
 
   # Defines the root path route ("/")
   # root "posts#index"

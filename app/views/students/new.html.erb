@@ -1,0 +1,25 @@
+<h1>CREATE A NEW STUDENT</h1>
+
+    <%= form_with scope: :student, url: students_path, local: true do |f|  %>
+
+        <p>
+            <%= f.label :firstName%>
+            <%= f.text_field :fistName %>
+        </p>
+
+        <p>
+        <%= f.label :lastname %>
+        <%= f.text_field :lastname %>
+       </p>
+
+        <p>
+        <%= f.label :saySomething %>
+        <%= f.text_area :saySomthing %>
+        </p>
+
+        <p>
+        <%= f.submit %>
+        </p>
+
+
+    <% end %>
