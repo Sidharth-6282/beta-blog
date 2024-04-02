@@ -1,0 +1,25 @@
+<h1>STUDENTS DETAILS PAGE</h1>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>firstName</th>
+            <th>lastname</th>
+            <th> saySomething</th>
+        </tr>
+    </thead>
+
+<tbody>
+<% @students.each do |student| %>
+        <tr>
+            <td><%= student.firstName %></td>
+           
+            <td><%= student.lastname %></td>
+        <td></td>
+            <td><%= student.saySomething %></td>
+        </tr>
+    <% end %>
+<tbody>
+
+</table>
