@@ -1,20 +1,31 @@
 class StudentsController < ApplicationController
 
     def show
+        
         @student = Student.find(params[:id])
-    end
+      end
 
     def index
         @students = Student.all
     end
 
-    def new
+
+    def new 
     end
+    
+   
 
     def create
-        render plain: params[:student]
-    end
+     #   @student = Student.new(params.require(:student).permit(:firstName, :lastname, :saySomething))
+      #  @student.save
+       # redirect_to @student
 
+       @student = Student.new(params.require(:student).permit(:firstName, :lastname, :saySomething))
+        @student.save
+        
+        redirect_to (@student)
+      
+      end
     
 
 end
